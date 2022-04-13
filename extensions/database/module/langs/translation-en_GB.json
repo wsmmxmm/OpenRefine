@@ -5,6 +5,7 @@
     "database-source/alert-conn-name-invalid-character": "Connection Name Input Error: Illegal Character in Input. Only [a-zA-Z0-9._-] Allowed",
     "database-parsing/store-cell": "Store blank cells as nulls",
     "database-parsing/store-row": "Store blank rows",
+    "database-parsing/store-column": "Store blank columns",
     "database-parsing/limit": "row(s) of data",
     "database-parsing/limit-next": "Load at most",
     "database-parsing/discard": "row(s) of data",

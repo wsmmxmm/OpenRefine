@@ -54,8 +54,8 @@
 
 
   <properties>
-    <java.minversion>11</java.minversion>
-    <java.maxversion>17</java.maxversion>
+      <java.version>11</java.version>
+      <java.minversion>11</java.minversion>
     <jee.path>/</jee.path>
     <jee.port>3333</jee.port>
     <refine.data>/tmp/refine</refine.data>
@@ -131,8 +131,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
 	<version>${maven-compiler-plugin.version}</version>
         <configuration>
-          <source>${java.minversion}</source>
-          <target>${java.minversion}</target>
+          <source>11</source>
+          <target>11</target>
           <encoding>UTF-8</encoding>
           <showDeprecation>false</showDeprecation>
         </configuration>
@@ -148,7 +148,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-	<version>${exec-maven-plugin.version}</version>
+	<version>3.0.0</version>
         <configuration>
           <skip>true</skip>
           <mainClass>none</mainClass>
@@ -225,7 +225,7 @@
       <plugin>
         <groupId>org.eluder.coveralls</groupId>
         <artifactId>coveralls-maven-plugin</artifactId>
-	<version>${coveralls-maven-plugin.version}</version>
+	<version>4.3.0</version>
         <dependencies>
           <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -247,7 +247,7 @@
        <plugin>
 	 <groupId>org.apache.maven.plugins</groupId>
 	 <artifactId>maven-deploy-plugin</artifactId>
-	 <version>${maven-deploy-plugin.version}</version>
+	 <version>3.0.0-M2</version>
 	 <configuration>
             <deployAtEnd>true</deployAtEnd>
 	 </configuration>
@@ -257,7 +257,8 @@
         <artifactId>formatter-maven-plugin</artifactId>
         <version>2.17.1</version>
         <configuration>
-          <configFile>${maven.multiModuleProjectDirectory}/IDEs/eclipse/Refine.style.xml</configFile>
+          <!--suppress UnresolvedMavenProperty -->
+            <configFile>${maven.multiModuleProjectDirectory}/IDEs/eclipse/Refine.style.xml</configFile>
         </configuration>
       </plugin>
       <plugin>
@@ -265,7 +266,8 @@
         <artifactId>maven-eclipse-plugin</artifactId>
         <version>2.10</version>
         <configuration>
-          <workspaceCodeStylesURL>${maven.multiModuleProjectDirectory}/IDEs/eclipse/Refine.style.xml</workspaceCodeStylesURL>
+          <!--suppress UnresolvedMavenProperty -->
+            <workspaceCodeStylesURL>${maven.multiModuleProjectDirectory}/IDEs/eclipse/Refine.style.xml</workspaceCodeStylesURL>
         </configuration>
       </plugin>
         <plugin>
@@ -300,7 +302,8 @@
                     <goal>attach-artifact</goal>
                 </goals>
                 <configuration>
-                    <skipAttach>${skipCreateExe}</skipAttach>
+                    <!--suppress UnresolvedMavenProperty -->
+<!--                    <skipAttach>${skipCreateExe}</skipAttach>-->
                     <artifacts>
                         <artifact>
                             <file>packaging/target/${project.build.finalName}-win-${project.version}.zip</file>
@@ -319,7 +322,8 @@
                     <goal>attach-artifact</goal>
                 </goals>
                 <configuration>
-                    <skipAttach>${skipCreateExe}</skipAttach>
+                    <!--suppress UnresolvedMavenProperty -->
+<!--                    <skipAttach>${skipCreateExe}</skipAttach>-->
                     <artifacts>
                         <artifact>
                             <file>packaging/target/${project.build.finalName}-win-with-java-${project.version}.zip</file>

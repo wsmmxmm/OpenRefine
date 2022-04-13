@@ -28,6 +28,7 @@
     "gdata-parsing/limit-next": "Load at most",
     "gdata-parsing/limit": "row(s) of data",
     "gdata-parsing/store-row": "Store blank rows",
+    "database-parsing/store-column": "Store blank columns",
     "gdata-parsing/store-cell": "Store blank cells as nulls",
     "gdata-source/alert-url": "You must specify a web address (URL) to import.",
     "gdata-source/type": "Type",
