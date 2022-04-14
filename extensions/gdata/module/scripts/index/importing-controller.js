@@ -155,7 +155,6 @@ Refine.GDataImportingController.prototype.getOptions = function() {
     options.limit = -1;
   }
   options.storeBlankRows = this._parsingPanelElmts.storeBlankRowsCheckbox[0].checked;
-  options.storeBlankColumns = this._parsingPanelElmts.storeBlankColumnsCheckbox[0].checked;
   options.storeBlankCellsAsNulls = this._parsingPanelElmts.storeBlankCellsAsNullsCheckbox[0].checked;
 
   options.disableAutoPreview = this._parsingPanelElmts.disableAutoPreviewCheckbox[0].checked;
@@ -188,7 +187,6 @@ Refine.GDataImportingController.prototype._showParsingPanel = function() {
   this._parsingPanelElmts.gdata_limit_next.html($.i18n('gdata-parsing/limit-next'));
   this._parsingPanelElmts.gdata_limit.html($.i18n('gdata-parsing/limit'));
   this._parsingPanelElmts.gdata_store_row.html($.i18n('gdata-parsing/store-row'));
-  this._parsingPanelElmts.database_store_column.html($.i18n('database-parsing/store-column'));
   this._parsingPanelElmts.gdata_store_cell.html($.i18n('gdata-parsing/store-cell'));
   
   if (this._parsingPanelResizer) {
@@ -286,9 +284,6 @@ Refine.GDataImportingController.prototype._showParsingPanel = function() {
   }
   if (this._options.storeBlankRows) {
     this._parsingPanelElmts.storeBlankRowsCheckbox.prop("checked", true);
-  }
-  if (this._options.storeBlankColumns) {
-      this._parsingPanelElmts.storeBlankColumnsCheckbox.prop("checked", true);
   }
   if (this._options.storeBlankCellsAsNulls) {
     this._parsingPanelElmts.storeBlankCellsAsNullsCheckbox.prop("checked", true);

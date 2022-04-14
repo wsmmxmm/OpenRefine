@@ -129,7 +129,6 @@ Refine.DatabaseImportController.prototype.getOptions = function() {
       options.limit = -1;
     }
     options.storeBlankRows = this._parsingPanelElmts.storeBlankRowsCheckbox[0].checked;
-    options.storeBlankColumns = this._parsingPanelElmts.storeBlankColumnsCheckbox[0].checked;
     options.storeBlankCellsAsNulls = this._parsingPanelElmts.storeBlankCellsAsNullsCheckbox[0].checked;
 
     options.disableAutoPreview = this._parsingPanelElmts.disableAutoPreviewCheckbox[0].checked;
@@ -157,7 +156,6 @@ Refine.DatabaseImportController.prototype._showParsingPanel = function() {
     this._parsingPanelElmts.database_limit_next.html($.i18n('database-parsing/limit-next'));
     this._parsingPanelElmts.database_limit.html($.i18n('database-parsing/limit'));
     this._parsingPanelElmts.database_store_row.html($.i18n('database-parsing/store-row'));
-    this._parsingPanelElmts.database_store_column.html($.i18n('database-parsing/store-column'));
     this._parsingPanelElmts.database_store_cell.html($.i18n('database-parsing/store-cell'));
     this._parsingPanelElmts.database_disable_auto_preview.text($.i18n('database-parsing/disable-auto-preview'));
 
@@ -220,9 +218,6 @@ Refine.DatabaseImportController.prototype._showParsingPanel = function() {
     }
     if (this._options.storeBlankRows) {
       this._parsingPanelElmts.storeBlankRowsCheckbox.prop("checked", true);
-    }
-    if (this._options.storeBlankColumns) {
-        this._parsingPanelElmts.storeBlankColumnsCheckbox.prop("checked", true);
     }
     if (this._options.storeBlankCellsAsNulls) {
       this._parsingPanelElmts.storeBlankCellsAsNullsCheckbox.prop("checked", true);

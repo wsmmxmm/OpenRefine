@@ -146,7 +146,6 @@ public class DatabaseImportController implements ImportingController {
 
         JSONUtilities.safePut(options, "skipDataLines", 0); 
         JSONUtilities.safePut(options, "storeBlankRows", true);
-        JSONUtilities.safePut(options, "storeBlankColumns", true);
         JSONUtilities.safePut(options, "storeBlankCellsAsNulls", true);
         if(logger.isDebugEnabled()) {
             logger.debug("doInitializeParserUI:::{}", result.toString());

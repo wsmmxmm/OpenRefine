@@ -84,7 +84,6 @@ public class PCAxisImporter extends TabularImportingParserBase {
         JSONUtilities.safePut(options, "ignoreLines", -1);
         JSONUtilities.safePut(options, "headerLines", 1);
         JSONUtilities.safePut(options, "storeBlankRows", true);
-        JSONUtilities.safePut(options, "storeBlankColumns", true);
         JSONUtilities.safePut(options, "storeBlankCellsAsNulls", true);
         
         TabularImportingParserBase.readTable(

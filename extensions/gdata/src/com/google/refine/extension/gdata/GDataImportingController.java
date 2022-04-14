@@ -182,7 +182,6 @@ public class GDataImportingController implements ImportingController {
         JSONUtilities.safePut(result, "options", options);
         JSONUtilities.safePut(options, "skipDataLines", 0); // number of initial data lines to skip
         JSONUtilities.safePut(options, "storeBlankRows", true);
-        JSONUtilities.safePut(options, "storeBlankColumns", true);
         JSONUtilities.safePut(options, "storeBlankCellsAsNulls", true);
         
         if ("spreadsheet".equals(type)) {
